@@ -1,12 +1,7 @@
-<<<<<<< HEAD
+
 import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-=======
-import { Button, Label, TextInput } from "flowbite-react";
-import React from "react";
-import { Link } from "react-router-dom";
->>>>>>> a8779efe1708450dd01a839d9137bff44f372187
 
 
 
@@ -71,43 +66,29 @@ function SignUp() {
         </div>
 
         <div className="flex-1">
-<<<<<<< HEAD
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-=======
-          <form className="flex flex-col gap-4">
->>>>>>> a8779efe1708450dd01a839d9137bff44f372187
             <div>
               <Label value='Your username'/>
               <TextInput 
                 type="text"
                 placeholder="Username"
                 id="username"
-<<<<<<< HEAD
 
                 onChange={handleChange}
-=======
->>>>>>> a8779efe1708450dd01a839d9137bff44f372187
               />
             </div>
             <div className="">
               <Label value='Your Email'/>
               <TextInput 
-<<<<<<< HEAD
                 type="email"
                 placeholder="Email"
                 id="email"
                 onChange={handleChange}
-=======
-                type="text"
-                placeholder="Email"
-                id="email"
->>>>>>> a8779efe1708450dd01a839d9137bff44f372187
               />
             </div>
             <div className="">
               <Label value='Your Password'/>
               <TextInput 
-<<<<<<< HEAD
                 type="password"
                 placeholder="Password"
                 id="password"
@@ -124,16 +105,6 @@ function SignUp() {
                   </>
                   ) : 'Sign Up'
               }
-=======
-                type="text"
-                placeholder="Password"
-                id="password"
-              />
-            </div>
-
-            <Button gradientDuoTone='purpleToPink' type="submit"> 
-              Sign Up
->>>>>>> a8779efe1708450dd01a839d9137bff44f372187
             </Button>
           </form>
           <div className="flex gap-2 text-sm mt-5 ">
@@ -142,7 +113,6 @@ function SignUp() {
                 Sign In
             </Link>
           </div>
-<<<<<<< HEAD
           {
             errorMessage && (
               <Alert className="mt-5" color='failure'>
@@ -150,8 +120,6 @@ function SignUp() {
               </Alert>
             )
           }
-=======
->>>>>>> a8779efe1708450dd01a839d9137bff44f372187
         </div>
       </div>
     </div>
