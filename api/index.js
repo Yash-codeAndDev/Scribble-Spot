@@ -16,11 +16,30 @@ mongoose.connect(process.env.MONGO_URI)
 
 const app = express()
 
+// General Middleware
 app.use(express.json())
+
+
 app.listen(3000, () => {
     console.log(`Server started on port 3000`)
 })
 
 
+
+// Routes
 app.use('/api/user' , userRoutes)
 app.use('/api/auth' , authRoutes)
+
+
+
+// Error handeling middleware
+app.use( (err,req,res,next)=> {
+    const statusCode = err.statusCode || 500
+    const message = err.message || 'Internal Server error'
+
+    res.status(statusCode).json({
+        success: false,
+        statusCode,
+        message
+    })
+}) 
